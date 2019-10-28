@@ -38,7 +38,7 @@ class Menu():
 		self.get_events(window)
 		window.windows[window.status].screen.fill((0, 0, 0))
 
-		font = pygame.font.Font(None, 50)
+		font = pygame.font.Font("ARIAL.TTF", 50)
 		
 		for i in range(len(self.texts.texts)):
 			if self.texts.pointer != i:
@@ -119,7 +119,7 @@ class GamePlayWindow():
 	def drawGameOverWindow(self, window):
 		window.windows[window.status].screen.fill((0, 0, 0))
 
-		font = pygame.font.Font(None, 50)
+		font = pygame.font.Font("ARIAL.TTF", 50)
 
 		for i in range(len(self.texts['gameOver'].texts)):
 			if self.texts['gameOver'].pointer != i:
@@ -140,7 +140,7 @@ class GamePlayWindow():
 	def drawWinWindow(self, window):
 		window.windows[window.status].screen.fill((0, 0, 0))
 
-		font = pygame.font.Font(None, 50)
+		font = pygame.font.Font("ARIAL.TTF", 50)
 
 		for i in range(len(self.texts['winWindow'].texts)):
 			if self.texts['winWindow'].pointer != i:
@@ -233,7 +233,7 @@ class Timer():
 		window.windows[window.status].screen.fill((0, 0, 0))
 
 		self.update()
-		font = pygame.font.Font(None, 50)
+		font = pygame.font.Font("ARIAL.TTF", 50)
 		text = font.render(str(self.seconds), 5, (255, 255, 255))
 		window.windows[window.status].screen.blit(text, self.coords)
 
@@ -254,7 +254,7 @@ class StopWatch():
 		window.windows[window.status].screen.fill((0, 0, 0))
 
 		self.update()
-		font = pygame.font.Font(None, 50)
+		font = pygame.font.Font("ARIAL.TTF", 50)
 		text = font.render(str(self.seconds), 5, (255, 255, 255))
 		window.windows[window.status].screen.blit(text, self.coords)
 
@@ -465,8 +465,8 @@ class InputBox:
 		self.enter = False
 
 	def draw(self, window):
-		font2 = font.Font(None, self.font_size)
-		font1 = font.Font(None, self.font_size)
+		font1 = pygame.font.Font("ARIAL.TTF", self.font_size)
+		font2 = pygame.font.Font("ARIAL.TTF", self.font_size)
 		text = font1.render(self.text, 0, self.text_color)
 		text2 = font2.render(self.field_name, 0, self.border_color)
 		self.text_surface = text

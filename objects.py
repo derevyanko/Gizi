@@ -73,9 +73,9 @@ class Menu():
 					if self.texts.pointer == 0:
 						window.status = 'gameplay'
 					elif self.texts.pointer == 1:
-						open_file('highscores.json')
+						self.open_file('highscores.json')
 					elif self.texts.pointer == 2:
-						open_file('instruction.html')
+						self.open_file('instruction.html')
 					else:
 						window.run = False
 
